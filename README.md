@@ -1,7 +1,6 @@
 # TC_CancerImmunotherapy_Challenge1
 Code and solution for Cancer Immunotherapy Data Science Grand Challenge - Challenge 1
-
-# Challenge 1 submission - Ai VU HONG (vuhongai)
+Challenge 1 submission - Ai VU HONG (vuhongai)
 
 ## 1 Overview
 In order to predict the 5-state proportions of different knockout in the test set, I learned the minimal presentation of all 15077 genes (gene embedding - 32-dimension vector) from provided scRNA-seq data. The [scETM model](https://github.com/hui2000ji/scETM) was used to trained and extract gene embedding. Next, multiple fully-connected neural networks was trained mapping 32-D gene embedding vector to 5-D output vector, resulting multiple predictions on 7 held-out test set. These predictions were then filtered and averaged for final submission. 
