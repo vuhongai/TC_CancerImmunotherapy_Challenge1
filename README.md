@@ -1,6 +1,9 @@
 # TC_CancerImmunotherapy_Challenge1
 Code and solution for Cancer Immunotherapy Data Science Grand Challenge - Challenge 1
+
 Challenge 1 submission - Ai VU HONG (vuhongai)
+
+This submission ranked 5th in the last public leaderboard but unfortunately out of top 10 in the final private leaderboard. In fact, the prediction of the 3 genes Fosb, Mafk, Stat3 are indeed not so bad, but Ets1 is completely unexpected (for everyone) where the unlabeled class account for 99%, I wonder whose solution can predict that.
 
 ## 1 Overview
 In order to predict the 5-state proportions of different knockout in the test set, I learned the minimal presentation of all 15077 genes (gene embedding - 32-dimension vector) from provided scRNA-seq data. The [scETM model](https://github.com/hui2000ji/scETM) was used to trained and extract gene embedding. Next, multiple fully-connected neural networks was trained mapping 32-D gene embedding vector to 5-D output vector, resulting multiple predictions on 7 held-out test set. These predictions were then filtered and averaged for final submission. 
@@ -19,6 +22,7 @@ source anaconda3/bin/activate tcells
 Install dependencies
 
 Note: Make sure that torch is already installed before installing scETM
+
 Precisely, notebook step1 only use scETM and torch while step2 and step3 will need tensorflow.
 
 ```bash
